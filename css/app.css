@@ -1,0 +1,34 @@
+div {
+	border: 1px solid red;
+}
+
+h1 {
+	padding-top: 0.5rem;
+	text-transform: uppercase;
+	color: #2d3c49;
+	text-shadow: 2px 2px 4px #7d97ad;
+}
+
+h2 {
+	color: #7d97ad;
+}
+
+h3 {
+	text-align: center;
+	text-transform: uppercase;
+	color: #2d3c49;
+}
+
+img {
+	border-radius: 15px;
+}
+
+.logo {
+	font-size: 4.5rem;
+	color: #b4c2cb;
+	text-shadow: 2px 2px 4px #748b90;
+}
+
+.job-title {
+	text-transform: uppercase;
+}
