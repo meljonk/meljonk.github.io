@@ -7,7 +7,6 @@ h1 {
 
 h2 {
 	color: #7d97ad;
-	padding: 0.5rem;
 }
 
 h3 {
@@ -28,12 +27,4 @@ img {
 
 .job-title {
 	text-transform: uppercase;
-}
-
-.row.projects {
-	margin-bottom: 5rem;
-}
-
-.project-item {
-	padding-bottom: 1.5rem;
 }
