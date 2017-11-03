@@ -26,7 +26,6 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 		$(this).addClass('selected');
 		moves++;
 		$('#moves').text(moves/2);
-		console.log(moves/2);
 		if (cardsPicked.length <= 1) {
 			cardsPicked.push(card);
 			if (cardsPicked.length === 2) {
@@ -40,7 +39,6 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 						 $('#dialog').dialog('open');
 						}, 1000);
 					}
-					console.log(matched);
 				} else {
 					setTimeout(function() {
 					$('#gameboard').find('.selected').removeClass('selected');
@@ -48,7 +46,6 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 					cardsPicked = [];
 				}
 			}
-			console.log(cardsPicked);
 		}
 });
 
@@ -66,10 +63,4 @@ $('#dialog').dialog({
 
 startGame();
 
-console.log(cardData);
 
-
-// var start = new Date;
-// setInterval(function() {
-//     $('#timer').text((new Date - start) / 1000 + " Seconds");
-// }, 1000);
