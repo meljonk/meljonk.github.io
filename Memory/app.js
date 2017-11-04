@@ -1,7 +1,11 @@
 var cardData = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H'];
 
 matched = 0;
-moves = 0;
+
+setInterval(function() {
+    timer++;
+    $('#timer').text(timer);
+}, 1000);
 
 function shuffleArray(d) {
   for (var c = d.length - 1; c > 0; c--) {
@@ -14,7 +18,12 @@ function shuffleArray(d) {
 };
 
 function startGame() {
-  shuffleArray(cardData);
+    $('#gameboard').empty();
+      shuffleArray(cardData);
+      $('#moves').text("0");
+      moves = 0;
+      timer = 0;
+      matched = 0;
 	 $.each(cardData, function(index, value){
 		$('#gameboard').append('<div class="cards">' +cardData[index]+ '</div>');
 	})
@@ -26,6 +35,7 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 		$(this).addClass('selected');
 		moves++;
 		$('#moves').text(moves/2);
+		console.log(moves/2);
 		if (cardsPicked.length <= 1) {
 			cardsPicked.push(card);
 			if (cardsPicked.length === 2) {
@@ -36,9 +46,10 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 					cardsPicked = [];
 					if (matched === 8) {
 						setTimeout(function() {
-						 $('#dialog').dialog('open');
+						 $('#win-dialog').dialog('open');
 						}, 1000);
 					}
+					console.log(matched);
 				} else {
 					setTimeout(function() {
 					$('#gameboard').find('.selected').removeClass('selected');
@@ -46,6 +57,7 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 					cardsPicked = [];
 				}
 			}
+			console.log(cardsPicked);
 		}
 });
 
@@ -57,10 +69,46 @@ function compare(array) {
 return isSame;
 };
 
-$('#dialog').dialog({
-	autoOpen: false
+$('#win-dialog').dialog({
+	autoOpen: false,
+    width: 300,
+    height: 170,
+    buttons: {
+        YEP: function() { //ok
+            $(this).dialog('close');
+            startGame();
+           // $('#moves').text("0");
+        },
+        NAH: function() { //cancel
+            $(this).dialog('close');
+        }
+    },
+    open: function (event, ui) {
+        $('#win-dialog').text("You've won in " + timer + " seconds and " + moves + " moves! Pat yourself on the back. Do you want to play again?");
+    }
 });
+
+$('#restart-dialog').dialog({
+	autoOpen: false,
+    width: 300,
+    height: 150,
+    buttons: {
+        YES: function() { //ok
+            $(this).dialog('close');
+            startGame();
+        },
+        NO: function() { //cancel
+            $(this).dialog('close');
+        }
+    }
+});
+
+function reStart() {
+    setTimeout(function() {
+     $('#restart-dialog').dialog('open');
+    }, 1000);
+};
 
 startGame();
 
-
+console.log(cardData);
