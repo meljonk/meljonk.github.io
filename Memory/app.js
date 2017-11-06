@@ -5,20 +5,31 @@ matched = 0;
 setInterval(function() {
     timer++;
     $('#timer').text(timer);
-}, 1000);
+}, 1000)
 
-function shuffleArray(d) {
-  for (var c = d.length - 1; c > 0; c--) {
-    var b = Math.floor(Math.random() * (c + 1));
-    var a = d[c];
-    d[c] = d[b];
-    d[b] = a;
-  }
-  return d
+function starRating() {
+    if (moves < 22)  {
+        $('#stars').text("3");
+    } else if (moves > 22 && moves < 32) {
+        $('#stars').text("2");
+    } else if ( moves > 32){
+       $('#stars').text("1");
+    }
 };
 
+function shuffleArray(d) {
+    for (var c = d.length - 1; c > 0; c--) {
+        var b = Math.floor(Math.random() * (c + 1));
+        var a = d[c];
+        d[c] = d[b];
+        d[b] = a;
+    }
+    return d
+};
+ //creates gameboard populates shuffled card values
 function startGame() {
     $('#gameboard').empty();
+    $('#stars').text("");
       shuffleArray(cardData);
       $('#moves').text("0");
       moves = 0;
@@ -35,10 +46,11 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 		$(this).addClass('selected');
 		moves++;
 		$('#moves').text(moves/2);
+		//console.log(moves/2);
 		if (cardsPicked.length <= 1) {
 			cardsPicked.push(card);
 			if (cardsPicked.length === 2) {
-				console.log(compare(cardsPicked));
+				//console.log(compare(cardsPicked));
 				if (compare(cardsPicked) === true) {
 					$('#gameboard').find('.selected').removeClass('selected').addClass('match');
 					matched++;
@@ -48,6 +60,7 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 						 $('#win-dialog').dialog('open');
 						}, 1000);
 					}
+					console.log(matched);
 				} else {
 					setTimeout(function() {
 					$('#gameboard').find('.selected').removeClass('selected');
@@ -55,9 +68,12 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 					cardsPicked = [];
 				}
 			}
+			//console.log(cardsPicked);
 		}
+        starRating();
 });
 
+//compares two card values to see if they match
 function compare(array) {
 	var isSame = true;
 	for(var i=0; i < array.length; i++) {
@@ -66,6 +82,7 @@ function compare(array) {
 return isSame;
 };
 
+//modal for when a player matches all cards
 $('#win-dialog').dialog({
 	autoOpen: false,
     width: 300,
@@ -74,17 +91,17 @@ $('#win-dialog').dialog({
         YEP: function() { //ok
             $(this).dialog('close');
             startGame();
-           // $('#moves').text("0");
         },
         NAH: function() { //cancel
             $(this).dialog('close');
         }
     },
     open: function (event, ui) {
-        $('#win-dialog').text("You've won in " + timer + " seconds and " + moves + " moves! Pat yourself on the back. Do you want to play again?");
+        $('#win-dialog').text("You've won in " + timer + " seconds and " + moves/2 + " moves! Pat yourself on the back. Do you want to play again?");
     }
 });
 
+// modal for when a user clicks the restart button
 $('#restart-dialog').dialog({
 	autoOpen: false,
     width: 300,
@@ -107,3 +124,5 @@ function reStart() {
 };
 
 startGame();
+
+//console.log(cardData);
