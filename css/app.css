@@ -35,7 +35,9 @@ img {
 	padding-bottom: 1.5rem;
 }
 
-.anytown {
+.anytown,
+.pixelart,
+.matchgame {
 	padding-top: 0.5rem;
 	font-style: italic;
 	color: #7d97ad;
