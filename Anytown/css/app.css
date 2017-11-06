@@ -20,7 +20,15 @@ h2 ~ p { margin-bottom: 1rem; }
 	font-size: 1.3rem;
 }
 
-.header-logo { background-color: white; }
+.header-logo {
+	font-family: 'Lobster', cursive;
+	font-size: 2rem;
+	letter-spacing: 6px;
+	color: #fff;
+	transform:scale(1,1.5);
+	text-shadow: #000 1px 2px 2px;
+	text-transform: uppercase;
+}
 
 .search-form { width: 150px; }
 
