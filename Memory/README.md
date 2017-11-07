@@ -9,10 +9,10 @@ A Udacity FEND Project
 
 # How to load the game
 
-[Click Here] (https://meljonk.github.io/Memory/index.html) to play the game.
+Click https://meljonk.github.io/Memory/index.html to play the game.
 
 # Resources Used to Build the Game
 
-[Shuffle function] (https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
+Shuffle function: (https://stackoverflow.com/questions/2450954/how-to-randomize-shuffle-a-javascript-array)
 
-[Reset and Win modals] (https://api.jqueryui.com/dialog/)
+Reset and Win modals:  (https://api.jqueryui.com/dialog/)
