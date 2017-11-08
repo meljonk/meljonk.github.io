@@ -43,14 +43,14 @@ function startGame() {
 var cardsPicked = [];
 var selectCard = $('#gameboard').on( 'click', 'div', function() {
 		card = $(this).text();
-		$(this).addClass('selected');
+		$(this).addClass('selected').css("pointer-events","none");
 		moves++;
 		$('#moves').text(moves/2);
-		//console.log(moves/2);
+		console.log(moves/2);
 		if (cardsPicked.length <= 1) {
 			cardsPicked.push(card);
 			if (cardsPicked.length === 2) {
-				//console.log(compare(cardsPicked));
+				console.log(compare(cardsPicked));
 				if (compare(cardsPicked) === true) {
 					$('#gameboard').find('.selected').removeClass('selected').addClass('match');
 					matched++;
@@ -63,12 +63,12 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 					console.log(matched);
 				} else {
 					setTimeout(function() {
-					$('#gameboard').find('.selected').removeClass('selected');
+					$('#gameboard').find('.selected').removeClass('selected').css("pointer-events","auto");
 					}, 1000);
 					cardsPicked = [];
 				}
 			}
-			//console.log(cardsPicked);
+			console.log(cardsPicked);
 		}
         starRating();
 });
@@ -125,4 +125,4 @@ function reStart() {
 
 startGame();
 
-//console.log(cardData);
+console.log(cardData);
