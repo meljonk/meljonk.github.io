@@ -25,7 +25,7 @@ img {border-radius: 15px;}
 	text-shadow: 2px 2px 4px #748b90;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 600px) {
 	.logo {display: none;}
 }
 
