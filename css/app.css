@@ -16,9 +16,7 @@ h3 {
 	color: #2d3c49;
 }
 
-img {
-	border-radius: 15px;
-}
+img {border-radius: 15px;}
 
 .logo {
 	font-size: 4.5rem;
@@ -27,13 +25,13 @@ img {
 	text-shadow: 2px 2px 4px #748b90;
 }
 
-.job-title {
-	text-transform: uppercase;
+@media (max-width: 350px) {
+	.logo {display: none;}
 }
 
-.project-item {
-	padding-bottom: 1.5rem;
-}
+.job-title {text-transform: uppercase;}
+
+.project-item {padding-bottom: 1.5rem;}
 
 .anytown,
 .pixelart,
