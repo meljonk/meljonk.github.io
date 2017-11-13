@@ -2,10 +2,17 @@ var cardData = ['A','A','B','B','C','C','D','D','E','E','F','F','G','G','H','H']
 
 matched = 0;
 
-setInterval(function() {
-    timer++;
+//starts the timer
+var timerCount = setInterval(function() {
+    if (moves > 0.5 && matched < 8) {timer++};
     $('#timer').text(timer);
-}, 1000)
+}, 1000);
+
+//clears timer count
+if (matched === 8) {
+    clearInterval(timerCount);
+};
+
 
 function starRating() {
     if (moves < 22)  {
@@ -26,7 +33,8 @@ function shuffleArray(d) {
     }
     return d
 };
- //creates gameboard populates shuffled card values
+
+ //creates gameboard and populates deck with shuffled card values
 function startGame() {
     $('#gameboard').empty();
     $('#stars').text("");
@@ -40,14 +48,15 @@ function startGame() {
 	})
 };
 
+
 var cardsPicked = [];
 var selectCard = $('#gameboard').on( 'click', 'div', function() {
 		card = $(this).text();
-		$(this).addClass('selected').css("pointer-events","none");
+		$(this).addClass('selected').css("pointer-events","none"); //prevents card from being selected again
 		moves++;
 		$('#moves').text(moves/2);
 		console.log(moves/2);
-		if (cardsPicked.length <= 1) {
+		if (cardsPicked.length < 2) {
 			cardsPicked.push(card);
 			if (cardsPicked.length === 2) {
 				console.log(compare(cardsPicked));
@@ -57,17 +66,18 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 					cardsPicked = [];
 					if (matched === 8) {
 						setTimeout(function() {
-						 $('#win-dialog').dialog('open');
+						$('#win-dialog').dialog('open');
 						}, 1000);
 					}
 					console.log(matched);
 				} else {
 					setTimeout(function() {
-					$('#gameboard').find('.selected').removeClass('selected').css("pointer-events","auto");
-					}, 1000);
+					$('#gameboard').find('.selected').removeClass('selected').css("pointer-events","auto"); //allows card to be selected again if no match
+                }, 800);
 					cardsPicked = [];
 				}
 			}
+
 			console.log(cardsPicked);
 		}
         starRating();
@@ -97,7 +107,8 @@ $('#win-dialog').dialog({
         }
     },
     open: function (event, ui) {
-        $('#win-dialog').text("You've won in " + timer + " seconds and " + moves/2 + " moves! Pat yourself on the back. Do you want to play again?");
+        var star = $('#stars').text();
+        $('#win-dialog').text("You've won in " + timer + " seconds and " + moves/2 + " moves, with a " + star + " star rating! Pat yourself on the back. Do you want to play again?");
     }
 });
 
