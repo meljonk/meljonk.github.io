@@ -13,7 +13,6 @@ if (matched === 8) {
     clearInterval(timerCount);
 };
 
-
 function starRating() {
     if (moves < 22)  {
         $('#stars').text("3");
@@ -48,7 +47,6 @@ function startGame() {
 	})
 };
 
-
 var cardsPicked = [];
 var selectCard = $('#gameboard').on( 'click', 'div', function() {
 		card = $(this).text();
@@ -77,7 +75,6 @@ var selectCard = $('#gameboard').on( 'click', 'div', function() {
 					cardsPicked = [];
 				}
 			}
-
 			console.log(cardsPicked);
 		}
         starRating();
