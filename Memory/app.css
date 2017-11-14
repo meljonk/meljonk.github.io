@@ -80,7 +80,7 @@ footer {
 
 #win-dialog,
 #restart-dialog {
-    padding: 15px;
+    padding-top: 20px;
     text-align: center;
     background-color: #c7cddd;
     border: 2px solid black;
@@ -107,4 +107,38 @@ footer {
     border-right: 2px solid black;
     border-bottom: 2px solid black;
     border-left: 2px solid black;
+}
+
+@media (max-width: 430px) {
+    .stats {
+        width: 100%;
+    }
+    #moves {
+        width: 50px;
+    }
+    .counter {
+        margin-right: 30px;
+        width: 4rem;
+    }
+    .time {
+        padding-right: 3px;
+        width: 4rem;
+    }
+    #restart {
+        width: 4.3rem;
+    }
+    #gameboard {
+        width: 100%;
+        height: 300px;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .cards {
+        width: 55px;
+        height: 55px;
+        padding-top: 4px;
+        margin-right: 4px;
+        margin-left: 4px;
+        font-size: 2rem;
+    }
 }
