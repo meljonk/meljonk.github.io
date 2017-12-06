@@ -60,7 +60,7 @@ $(function() {
         var body = $('body');
         var menu = $('.menu-icon-link');
         it('is hidden by default', function() {
-            expect(body.attr('class')).toEqual('menu-hidden');
+            expect(body.hasClass('menu-hidden')).toBe(true);
         });
 
         /* TODO: Write a test that ensures the menu changes
@@ -72,7 +72,7 @@ $(function() {
            menu.click();
            expect(body.hasClass('menu-hidden')).toBe(false);
            menu.click();
-           expect(body.attr('class')).toEqual('menu-hidden');
+           expect(body.hasClass('menu-hidden')).toBe(true);
         });
     });
 
