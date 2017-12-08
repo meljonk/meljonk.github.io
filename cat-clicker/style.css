@@ -1,0 +1,34 @@
+html {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+h3 {
+    text-align: center;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 2px solid black;
+}
+
+.large {
+    width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.thumbnails {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.thumbnails img {
+    width: 250px;
+    height: 175px;
+}
