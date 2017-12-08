@@ -8,18 +8,18 @@
 		<!-- custom css sheet should be put after other stylesheets so custom styles overide others -->
     </head>
     <body>
-        <div class="wrapper">
-            <div class="large">
-                <img src="images/kitten-01.jpg">
-            </div>
-            <div class="thumbnails">
-                <img src="images/kitten-01.jpg" class="thumb">
-                <img src="images/kitten-02.jpg" class="thumb">
-                <img src="images/kitten-03.jpg" class="thumb">
-                <img src="images/kitten-04.jpg" class="thumb">
-                <img src="images/kitten-05.jpg" class="thumb">
-            </div>
+        <div id="cat">
+            <h2 id="cat-name"></h2>
+            <div>Clicks: <span id="cat-count"></span></div>
+            <img id="cat-img" src="" alt="cute cat">
         </div>
+        <div id="cat-list"></div>
+           <!-- <button type="button">Puss In Boots</button>
+           <button type="button">Sir Purrs Alot</button>
+           <button type="button">Danger Kitty</button>
+           <button type="button">Hide N Seek</button>
+           <button type="button">A Tribe Called Quest</button> -->
+
 
 	    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
 	    <script src="app.js"></script>

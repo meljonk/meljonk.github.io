@@ -4,31 +4,30 @@ html {
     box-sizing: border-box;
 }
 
-h3 {
+h2 {
     text-align: center;
-}
-
-li {
-    list-style: none;
 }
 
 img {
     border: 2px solid black;
 }
 
-.large {
-    width: 600px;
+#cat {
+    width: 610px;
     margin-right: auto;
     margin-left: auto;
+	text-align: center;
 }
 
-.thumbnails {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+#cat-list {
+    width: 600px;
+    padding-top: 20px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
 }
 
-.thumbnails img {
-    width: 250px;
-    height: 175px;
+button {
+    padding: 5px;
+    margin: 5px;
 }
