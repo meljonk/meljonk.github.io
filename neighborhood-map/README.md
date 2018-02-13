@@ -1,4 +1,5 @@
 ## Udacity Neighborhood Map Project
+[Live Map](https://meljonk.github.io/neighborhood-map/index.html)
 
 ### Project Overview
 To develop a single page application featuring a map of a neighborhood that displays map markers identifying at least 
@@ -8,8 +9,12 @@ third-party data about those locations, and various ways to browse the content, 
 
 ### Resources & References
 [Google Maps API](https://developers.google.com/maps/documentation/javascript/)
+
 [Weather Underground API](https://www.wunderground.com/weather/api/d/docs)
+
 [Knockout.js](http://knockoutjs.com/)
+
 [Udacity Discussion Forum](https://discussions.udacity.com/c/nd001-neighborhood-map-project/neighborhood-map-project)
 
-[Live Map](https://meljonk.github.io/neighborhood-map/index.html)
+
+
