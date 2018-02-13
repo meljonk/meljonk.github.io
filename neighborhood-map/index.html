@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Popular London Tube Stations</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="sidebar">
+                <h2>London Tube Stations</h2>
+                <div class="search-container">
+                    <input id="search" type="text" placeholder="Search for stations" data-bind="textInput: filterLocations">
+                    <ul class="list-group" data-bind="foreach: locationList">
+                        <li><a href="#" class="list-group-item list-group-item-action" data-bind="text: title, click: show"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+        <script src="app.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlfCAj6CRoATjOWGlb7-6MuekCvW4b4Go&callback=mapSuccess" async defer onerror="mapError()"></script>
+        <script src="data.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+    </body>
+</html>
