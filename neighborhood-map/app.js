@@ -22,7 +22,7 @@ var PopulateMarkers = function(data) {
 	self.marker = new google.maps.Marker({
 		title: this.title,
 		position: this.position,
-		icon: ('http://maps.google.com/mapfiles/ms/icons/red-dot.png'),
+		icon: ('https://maps.google.com/mapfiles/ms/icons/red-dot.png'),
         animation: google.maps.Animation.DROP
     });
 	//populates all marker locations in sidebar
@@ -70,7 +70,7 @@ var ViewModel = function() {
 };
 
 function popupInfo(marker, title, location, lines, infowindow) {
-	var weatherUrl = "http://api.wunderground.com/api/517388eb0bd8a422/conditions/q/UK/London.json";
+	var weatherUrl = "https://api.wunderground.com/api/517388eb0bd8a422/conditions/q/UK/London.json";
 	$.getJSON(weatherUrl, function(data) {
 		var details = data.current_observation;
 		var currentWeather = details.temp_f + '°F ' + details.weather;
