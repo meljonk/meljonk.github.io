@@ -5,6 +5,7 @@
         <title>Popular London Tube Stations</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="style.css">
+
     </head>
     <body>
         <div class="wrapper">
@@ -19,10 +20,12 @@
             </div>
             <div id="map"></div>
         </div>
-        <script src="app.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlfCAj6CRoATjOWGlb7-6MuekCvW4b4Go&callback=mapSuccess" async defer onerror="mapError()"></script>
-        <script src="data.js"></script>
-        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.2/knockout-min.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+        <script src="data.js"></script>
+        <script src="app.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDlfCAj6CRoATjOWGlb7-6MuekCvW4b4Go&callback=mapSuccess" async onerror="mapError()"></script>
+
+
     </body>
 </html>
