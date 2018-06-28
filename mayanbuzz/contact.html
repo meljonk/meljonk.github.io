@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Mayan Buzz</title>
+  <link href="https://fonts.googleapis.com/css?family=Redressed">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<header>
+		<div class="logo">
+			<img src="images/pyramid.jpg">
+		</div>
+		<div class="header-middle">
+			<div class="title">Mayan Buzz Cafe</div>
+			<ul class="top-nav">
+				<li class="nav-item"><a href="index.html">About</a></li>
+				<li class="nav-item"><a href="coffee.html">Coffee</a></li>
+				<li class="nav-item"><a href="menu.html">Menu</a></li>
+				<li class="nav-item"><a href="events.html">Events</a></li>
+				<li class="nav-item"><a href="gallery.html">Gallery</a></li>
+				<li class="nav-item"><a class="active" href="contact.html">Contact</a></li>
+			</ul>
+		</div>
+		<div id="mySidenav" class="sidenav">
+			<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="index.html">About</a>
+			<a href="coffee.html">Coffee</a>
+			<a href="menu.html">Menu</a>
+			<a href="events.html">Events</a>
+			<a href="gallery.html">Gallery</a>
+			<a href="contact.html">Contact</a>
+		</div>
+		<div class="hamburger"><span onclick="openNav()">&#9776;</span></div>
+	</header>
+    <div class="wrapper">
+		<div class="contact-building"></div>
+        <div class="about location">
+			<h1>Contact Us</h1>
+	        <p>Conveniently located on Grandville Ave near Cherry Street and easily accessible from North and South 131. We are close to Central Station, Amtrak, <a href="https://foundersbrewing.com/">Founders Brewery</a> and <a href="http://sectionlive.com/">The Intersection.</a></p>
+	        <p>Phone Number: (616) 608-3052</p>
+	        <p>Email: <a href="mailto:mayanbuzz@comcast.net">mayanbuzz@comcast.net</a></p>
+	        <p>Address: 208 Grandville Avenue SW. Grand Rapids, MI. 49503</p>
+
+	        <h2>Hours: Daily 6am to 12am</h2>
+	        <p>
+	          Closed 6 holidays: New Years Day, Memorial Day, July 4, Labor Day, Thanksgiving, Christmas</p>
+	        </p>
+        </div>
+        <div class="map"><script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script></div>
+		<div id='gmap_canvas' style='height:440px;width:100%;'></div>
+		<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
+		</div>
+		<script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(42.959336,-85.67311949999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(42.959336,-85.67311949999998)});infowindow = new google.maps.InfoWindow({content:'<strong>Mayan Buzz Cafe</strong><br>208 Grandville Avenue SW. Grand Rapids, MI. 49503<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+
+		<footer class=footer-contact-cont>
+			<div class="footer-contact">
+				(616) 608-3052<br>
+				mayanbuzz@comcast.net<br>
+				208 Grandville Avenue SW.<br>
+				Grand Rapids, MI. 49503
+			</div>
+			<div class="social">
+				<a href="https://www.facebook.com/pages/Mayan-Buzz-Cafe/624381820926055?fref=ts"><i class="fab fa-facebook-f"></i></a>
+				<a href="https://www.instagram.com/mayanbuzzcafe/"><i class="fas fa-camera-retro"></i></a>
+				<a href="https://twitter.com/mayanbuzz"><i class="fab fa-twitter"></i></a>
+			</div>
+    		<div class="legal">
+    	    	<div>
+					Copyright Mayan Buzz 2018<br>
+    				Created by meljonk
+				</div>
+    		</div>
+        </footer>
+    </div>
+	<script
+    src="https://code.jquery.com/jquery-2.2.4.js"></script>
+     <script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>
