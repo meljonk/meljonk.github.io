@@ -1,10 +1,12 @@
 
 html {
 	font-size: 1rem;
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 *, *:before, *:after {
-  	box-sizing: inherit;
+  	-webkit-box-sizing: inherit;
+  	        box-sizing: inherit;
 }
 body {
 	position: relative;
@@ -32,14 +34,21 @@ p a  {
 
 /* HEADER */
 header {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
     width: 100%;
 	height: 150px;
 	background-color: #1b0000;
 }
 .header-middle {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	width: 100%;
 	max-width: 800px;
 	margin: auto;
@@ -68,10 +77,17 @@ header {
 	}
 }
 .logo {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	align-self: center;
-	justify-content: center;
-	flex: 0 0 175px;
+	-ms-flex-item-align: center;
+	    align-self: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-flex: 0;
+	    -ms-flex: 0 0 175px;
+	        flex: 0 0 175px;
 	height: 150px;
 }
 .logo img {
@@ -79,13 +95,17 @@ header {
 	width: 100%;
 }
 .top-nav {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 ul {
 	list-style: none;
 }
 .nav-item {
-	flex: 1 1 auto;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
 	padding-top: 5px;
 }
 .nav-item a {
@@ -102,6 +122,7 @@ ul {
     display: none;
 	width: 350px;
     height: 100vh;
+	padding-left: 15px;
     z-index: 1;
     background-color: #1b0000;
     overflow-x: hidden;
@@ -145,6 +166,9 @@ a.active {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.mobile-image {
+	display: none;
+}
 .menu-wrapper  {
 	max-width: 900px;
 	padding: 30px;
@@ -168,34 +192,50 @@ a.active {
   	grid-gap: 50px;
 	padding-bottom: 30px;
 	border-bottom: 7px dotted #000;
-	box-shadow: inset 0 -3px 0 0 #000, 0 3px 0 0 #000;
+	-webkit-box-shadow: inset 0 -3px 0 0 #000, 0 3px 0 0 #000;
+	        box-shadow: inset 0 -3px 0 0 #000, 0 3px 0 0 #000;
 }
 .bites{
 	padding-top: 20px;
 }
 .food-menu {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
 	max-width:950px;
 	margin: auto;
 }
 .item-price {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	padding: 4px;
 }
 .gallery {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
+	-ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 }
 .gallery div {
-	flex-basis: 24%;
+	-ms-flex-preferred-size: 24%;
+	    flex-basis: 24%;
 }
 .gallery div img {
 	width: 100%;
 	height: 300px;
-	object-fit: contain;
+	-o-object-fit: contain;
+	   object-fit: contain;
 }
 .event-calendar p {
 	max-width: 800px;
@@ -222,8 +262,11 @@ a.active {
 	margin: auto;
 }
 .card-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 }
 .coffee-history p,
 .arabica p,
@@ -234,12 +277,18 @@ a.active {
 .coffee-history,
 .arabica,
 .robusta {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
 }
 .arabica,
 .robusta {
-	justify-content: center;
-	align-items: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	    -ms-flex-align: center;
+	        align-items: center;
 }
 .coffee-history img,
 .arabica img,
@@ -260,41 +309,56 @@ a.active {
 	text-align: center;
 }
 .card-wrapper {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-between;
+	-webkit-box-pack: justify;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 .flip-cont {
     height: 300px;
-    perspective: 600px;
-	flex: 1 1 auto;
+    -webkit-perspective: 600px;
+            perspective: 600px;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1 1 auto;
+	        flex: 1 1 auto;
 }
 .card {
 	position: relative;
 	width: 100%;
 	height: 100%;
 	cursor: pointer;
-	transform-style: preserve-3d;
-	transform-origin: center right;
+	-webkit-transform-style: preserve-3d;
+	        transform-style: preserve-3d;
+	-webkit-transform-origin: center right;
+	        transform-origin: center right;
+	-webkit-transition: -webkit-transform 1s;
+	transition: -webkit-transform 1s;
 	transition: transform 1s;
+	transition: transform 1s, -webkit-transform 1s;
 }
 .card-text {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	color: #f8eeee;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 3.5rem;
 	text-transform: uppercase;
 }
 .card.is-flipped {
-	transform: translateX(-100%) rotateY(-180deg);
+	-webkit-transform: translateX(-100%) rotateY(-180deg);
+	        transform: translateX(-100%) rotateY(-180deg);
 }
 .card-face {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	        backface-visibility: hidden;
 }
 .card-face p {
 	padding: 15px;
@@ -312,13 +376,18 @@ a.active {
 }
 .card-face-back {
 	background-color: #efeee8;
-	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+	        transform: rotateY(180deg);
 }
 
 /* FOOTER */
 footer {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 	height: 150px;
 	padding: 10px;
 	margin-top: 50px;
@@ -327,19 +396,26 @@ footer {
 	color: #efebe9;
 }
 footer > * {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
-	flex: 1;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-flex: 1;
+	    -ms-flex: 1;
+	        flex: 1;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	align-self: center;
-}
-.footer-contact-cont {
-	margin-top: 0;
+	-ms-flex-item-align: center;
+	    align-self: center;
 }
 .social {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: space-around;
+	-ms-flex-pack: distribute;
+	    justify-content: space-around;
 }
 .social i {
 	padding-right: 10px;
@@ -351,14 +427,16 @@ footer > * {
 .footer-contact {
 	font-size: 14px;
 	line-height: 18px;
+	color: #77787c;
 }
 .footer-contact a {
-	color: #fff;
+	color: #77787c;
 }
 
 /*  IMAGE GALLERY MODAL */
 .myImg {
     cursor: pointer;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
 .myImg:hover {
@@ -406,8 +484,8 @@ footer > * {
     to {-webkit-transform:scale(1)}
 }
 @keyframes zoom {
-    from {transform:scale(0)}
-    to {transform:scale(1)}
+    from {-webkit-transform:scale(0);transform:scale(0)}
+    to {-webkit-transform:scale(1);transform:scale(1)}
 }
 /* The Modal Close Button */
 .close {
@@ -417,6 +495,7 @@ footer > * {
     color: #fff;
     font-size: 40px;
     font-weight: bold;
+    -webkit-transition: 0.3s;
     transition: 0.3s;
 }
 .close:hover,
@@ -439,8 +518,11 @@ footer > * {
 	.hamburger {
 	position: absolute;
 	right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-	align-self: center;
+	-ms-flex-item-align: center;
+	    align-self: center;
     padding-right: 15px;
     }
     .top-nav {
@@ -456,17 +538,26 @@ footer > * {
 		border-bottom: none;
 	}
 	.gallery div  {
-		flex-basis: 50%;
+		-ms-flex-preferred-size: 50%;
+		    flex-basis: 50%;
 	}
 	.card-wrapper {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 	.flip-cont {
 		width: 600px;
 	    height: 400px;
-	    perspective: 600px;
+	    -webkit-perspective: 600px;
+	            perspective: 600px;
 		margin: auto;
 	}
 	.card-face-front img {
@@ -492,14 +583,21 @@ footer > * {
 	h2 {
 		font-size: 1.2rem;
 	}
+	header,
+	.logo {
+		height: 110px;
+	}
 	.top-nav {
     	display: none;
     }
 	.hamburger {
 		position: absolute;
 		right: 0;
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		align-self: center;
+		-ms-flex-item-align: center;
+		    align-self: center;
 		padding-right: 15px;
    }
 	.hamburger > span {
@@ -507,6 +605,12 @@ footer > * {
 	    font-size: 4rem;
 	    color: white;
 	    cursor: pointer;
+   }
+    .parallax-main {
+	   display: none;
+   }
+    .mobile-image {
+   	display: block;
    }
 	.drink-menu {
 		display: grid;
@@ -516,24 +620,40 @@ footer > * {
         width: 100%;
     }
 	.menu-item-cont {
-		flex-direction: column;
-		flex-basis: 100%;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
 	}
 	.gallery {
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 	}
 	.gallery div img  {
-		flex-basis: 100%;
+		-ms-flex-preferred-size: 100%;
+		    flex-basis: 100%;
 		height: auto;
 	}
 	footer {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
 		height: auto;
 		margin-top: 0;
 	}
 	.social {
-		order: -1;
+		-webkit-box-ordinal-group: 0;
+		    -ms-flex-order: -1;
+		        order: -1;
+		margin-bottom: 10px;
 	}
 	.social i {
 		font-size: 2.2rem;
@@ -542,8 +662,12 @@ footer > * {
 		text-align: center;
 	}
 	.coffee-history div {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: center;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 		width: 100%;
 	}
 	.coffee-history-cont,
@@ -554,17 +678,34 @@ footer > * {
 	.coffee-roasts,
 	.card-wrapper,
 	.card {
-		flex-direction: column;
-		justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
+	}
+	/* .bean-varieties,  */
+	.coffee-history-cont {
+		margin-bottom: 0;
 	}
 	.card-wrapper {
+		display: -webkit-box;
+		display: -ms-flexbox;
 		display: flex;
-		flex-direction: column;
-		justify-content: center;
+		-webkit-box-orient: vertical;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: column;
+		        flex-direction: column;
+		-webkit-box-pack: center;
+		    -ms-flex-pack: center;
+		        justify-content: center;
 	}
 	.flip-cont {
 		width: 100%;
-	    perspective: 600px;
+	    -webkit-perspective: 600px;
+	            perspective: 600px;
 		margin: auto;
 	}
 	.card-face p {

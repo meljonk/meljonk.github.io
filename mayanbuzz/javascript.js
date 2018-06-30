@@ -4,11 +4,6 @@ var card = $('.card');
 	  $(this).toggleClass('is-flipped');
 });
 
-// $(".menu-icon").on("click", function() {
-// 	$(".top-nav")toggleClass("open");
-// 	}
-// });
-
 function openNav() {    document.getElementById("mySidenav").style.display = "block";
 };
 
