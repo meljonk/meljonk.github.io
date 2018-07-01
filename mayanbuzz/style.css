@@ -612,6 +612,9 @@ footer > * {
     .mobile-image {
    	display: block;
    }
+   .mobile-image img {
+	   width: 100%;
+   }
 	.drink-menu {
 		display: grid;
 		grid-template-columns: 1fr;
