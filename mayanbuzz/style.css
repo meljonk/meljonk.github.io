@@ -644,15 +644,10 @@ footer > * {
 		    flex-basis: 100%;
 	}
 	.gallery {
-		-webkit-box-orient: vertical;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: column;
-		        flex-direction: column;
+		display: block;
 	}
 	.gallery div img  {
-		-ms-flex-preferred-size: 100%;
-		    flex-basis: 100%;
-		height: auto;
+		width: 100%;
 	}
 	footer {
 		display: -webkit-box;
