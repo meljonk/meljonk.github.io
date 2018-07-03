@@ -146,6 +146,7 @@ ul {
 	display: block;
     padding: 8px 8px 8px 32px;
 	font-family: "varela round", sans-serif;
+	font-size: 1.5rem;
     color: #efebe9;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -484,7 +485,7 @@ footer > * {
 	padding: 15px 0;
 	height: 150px;
     margin: auto;
-	font-family: "Montserrat", sans-serif;
+	font-family: "montserrat", sans-serif;
 	color: #fff;
 	letter-spacing: 1.5px;
     text-align: center;
