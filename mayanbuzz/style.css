@@ -266,14 +266,14 @@ a.active {
     background: url("images/exterior.jpg");
 	z-index: -2;
 }
-#Map{
+.map {
 	height: 400px;
 	margin-bottom: 0;
 }
-.olControlAttribution {
+/* .olControlAttribution {
     left: 5px;
 	bottom: 10px !important;
-}
+} */
 .coffee-wrapper {
 	max-width: 90%;
 	margin: auto;

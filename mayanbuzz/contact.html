@@ -6,8 +6,9 @@
   <meta name="format-detection" content="telephone=no">
   <title>Contact Mayan Buzz</title>
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
-  <script src="https://www.openlayers.org/api/OpenLayers.js"></script>
+  <link rel="stylesheet" "https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.css" type="text/css">>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/openlayers/4.6.5/ol.js"></script>
 </head>
 <body>
 	<header>
@@ -50,29 +51,23 @@
 	          Closed 6 holidays: New Years Day, Memorial Day, July 4, Labor Day, Thanksgiving, Christmas</p>
 	        </p>
         </div>
-		<div id="Map"></div>
+	    <div id="map" class="map"></div>
+	    <script>
+	      var map = new ol.Map({
+	        target: 'map',
+	        layers: [
+	          new ol.layer.Tile({
+	            source: new ol.source.OSM()
+	          })
+	        ],
+	        view: new ol.View({
+	          center: ol.proj.fromLonLat([-85.673234, 42.959415]),
+	          zoom: 17
+		  })
 
-	   <script>
-	       var lat = 42.959415;
-	       var lon = -85.673234;
-	       var zoom = 17;
+	      });
+	    </script>
 
-
-	       var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
-	       var toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
-	       var position = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
-
-	       map = new OpenLayers.Map("Map");
-	       var mapnik = new OpenLayers.Layer.OSM();
-	       map.addLayer(mapnik);
-
-	       var markers = new OpenLayers.Layer.Markers( "Markers" );
-	       map.addLayer(markers);
-	       markers.addMarker(new OpenLayers.Marker(position));
-
-	       map.setCenter(position, zoom);
-
-	   </script>
 		<footer class="footer-contact-cont">
 			<div class="footer-contact">
 				616.608.3052<br>
