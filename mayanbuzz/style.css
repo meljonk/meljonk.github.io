@@ -1,3 +1,15 @@
+@font-face {
+    font-family: "montserrat";
+    src: url("fonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+    font-family: "varela round";
+    src: url("fonts/Varela_Round/VarelaRound-Regular.ttf");
+}
+@font-face {
+    font-family: "redressed";
+    src: url("fonts/Redressed/Redressed-Regular.ttf");
+}
 
 html {
 	font-size: 1rem;
@@ -14,16 +26,16 @@ body {
 	overflow-x: hidden;
 }
 p {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "montserrat", sans-serif;
 	line-height: 1.5rem;
 	font-size: 1rem;
 }
 h1 {
-	font-family: 'Redressed', cursive;
+	font-family: "redressed", cursive;
 	font-size: 2.8rem;
 }
 h2 {
-	font-family: 'Montserrat', sans-serif;
+	font-family: "montserrat", sans-serif;
 	color: #1b0000;
 	font-size: 1.5rem;
 }
@@ -56,7 +68,7 @@ header {
 .header-middle .title {
 	padding-top: 10px;
 	padding-bottom: 10px;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-size: 4vw;
 	color: #a9c982;
 	letter-spacing: 0.75rem;
@@ -110,7 +122,7 @@ ul {
 }
 .nav-item a {
 	text-decoration: none;
-	font-family: 'Varela Round', sans-serif;
+	font-family: "varela round", sans-serif;
 	font-size: 1.2rem;
 	color: #efebe9;
 	text-transform: uppercase;
@@ -133,7 +145,7 @@ ul {
 .sidenav a {
 	display: block;
     padding: 8px 8px 8px 32px;
-	font-family: 'Varela Round', sans-serif;
+	font-family: "varela round", sans-serif;
     color: #efebe9;
 	text-decoration: none;
 	text-transform: uppercase;
@@ -254,8 +266,13 @@ a.active {
     background: url("images/exterior.jpg");
 	z-index: -2;
 }
-#gmap_canvas {
-	border-top: 10px solid gray;
+#Map{
+	height: 400px;
+	margin-bottom: 0;
+}
+.olControlAttribution {
+    left: 5px;
+	bottom: 10px !important;
 }
 .coffee-wrapper {
 	max-width: 90%;
@@ -345,7 +362,7 @@ a.active {
 	-webkit-transform: translate(-50%, -50%);
 	        transform: translate(-50%, -50%);
 	color: #f8eeee;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	font-size: 3.5rem;
 	text-transform: uppercase;
 }
@@ -361,9 +378,9 @@ a.active {
 	        backface-visibility: hidden;
 }
 .card-face p {
-	padding: 15px;
+	padding: 10px;
 	text-align: left;
-	line-height: 1.3rem;
+	line-height: 1.1rem;
     color: #000;
     font-size: 1rem;
 }
@@ -391,9 +408,8 @@ footer {
 	height: 150px;
 	padding: 10px;
 	margin-top: 50px;
-	background-color: #1b0000;
-	font-family: 'Varela Round', sans-serif;
-	color: #efebe9;
+	background-color: #000;
+	font-family: "varela round", sans-serif;
 }
 footer > * {
 	display: -webkit-box;
@@ -468,7 +484,7 @@ footer > * {
 	padding: 15px 0;
 	height: 150px;
     margin: auto;
-	font-family: 'Montserrat', sans-serif;
+	font-family: "Montserrat", sans-serif;
 	color: #fff;
 	letter-spacing: 1.5px;
     text-align: center;
@@ -506,7 +522,7 @@ footer > * {
 }
 
 /*  TABLET  */
-@media screen and (max-width: 1000px) and (min-width: 601px) {
+@media screen and (max-width: 1024px) and (min-width: 668px) {
 	h1 {
 	font-size: 2.2rem;
 	}
@@ -529,7 +545,6 @@ footer > * {
     display: none;
     }
     .hamburger > span {
-	padding-right: 5px;
     font-size: 3.8rem;
     color: white;
     cursor: pointer;
@@ -576,7 +591,7 @@ footer > * {
 }
 
 /* MOBILE */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 667px) {
 	h1 {
 		font-size: 2rem;
 	}

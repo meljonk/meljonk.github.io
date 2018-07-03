@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="format-detection" content="telephone=no">
   <title>Contact Mayan Buzz</title>
-  <link href="https://fonts.googleapis.com/css?family=Redressed">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
+  <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -50,13 +50,30 @@
 	          Closed 6 holidays: New Years Day, Memorial Day, July 4, Labor Day, Thanksgiving, Christmas</p>
 	        </p>
         </div>
-        <div class="map"><script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script></div>
-		<div id='gmap_canvas' style='height:440px;width:100%;'></div>
-		<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-		</div>
-		<script type='text/javascript'>function init_map(){var myOptions = {zoom:15,center:new google.maps.LatLng(42.959336,-85.67311949999998),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(42.959336,-85.67311949999998)});infowindow = new google.maps.InfoWindow({content:'<strong>Mayan Buzz Cafe</strong><br>208 Grandville Avenue SW. Grand Rapids, MI. 49503<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+		<div id="Map"></div>
 
-		<footer class=footer-contact-cont>
+	   <script>
+	       var lat = 42.959415;
+	       var lon = -85.673234;
+	       var zoom = 17;
+
+
+	       var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+	       var toProjection = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+	       var position = new OpenLayers.LonLat(lon, lat).transform( fromProjection, toProjection);
+
+	       map = new OpenLayers.Map("Map");
+	       var mapnik = new OpenLayers.Layer.OSM();
+	       map.addLayer(mapnik);
+
+	       var markers = new OpenLayers.Layer.Markers( "Markers" );
+	       map.addLayer(markers);
+	       markers.addMarker(new OpenLayers.Marker(position));
+
+	       map.setCenter(position, zoom);
+
+	   </script>
+		<footer class="footer-contact-cont">
 			<div class="footer-contact">
 				616.608.3052<br>
 				mayanbuzz@comcast.net<br>
